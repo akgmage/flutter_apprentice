@@ -31,7 +31,8 @@ class _RecipeDetailState extends State<RecipeDetail> {
             Text(
               widget.recipe.label,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 22,
+                fontWeight: FontWeight.w700,
               ),
             ),
             Expanded(
@@ -41,7 +42,11 @@ class _RecipeDetailState extends State<RecipeDetail> {
                   itemBuilder: (BuildContext context, int index) {
                     final ingredient = widget.recipe.ingredients[index];
                     return Text(
-                        '${ingredient.quantity * _slider_val} ${ingredient.measure} ${ingredient.name}');
+                      '${ingredient.quantity * _slider_val} ${ingredient.measure} ${ingredient.name}',
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                    );
                   }),
             ),
             Slider(
