@@ -33,6 +33,7 @@ class _RecipeDetailState extends State<RecipeDetail> {
               style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
+                color: Colors.black,
               ),
             ),
             Expanded(
@@ -43,9 +44,7 @@ class _RecipeDetailState extends State<RecipeDetail> {
                     final ingredient = widget.recipe.ingredients[index];
                     return Text(
                       '${ingredient.quantity * _slider_val} ${ingredient.measure} ${ingredient.name}',
-                      style: const TextStyle(
-                        fontSize: 20,
-                      ),
+                      style: const TextStyle(fontSize: 20, color: Colors.black),
                     );
                   }),
             ),
